@@ -1,0 +1,137 @@
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
+}
+.page-enter,
+.page-leave-to {
+  transform: translate3d(0, 15px, 0);
+  opacity: 0;
+}
+
+@import "~/assets/fonts/inter.css";
+
+// $primary: #2787f5;
+// $grey: #2a2c33;
+// $grey-lighter: #3d4047;
+// $grey-light: #53565f;
+// $grey-darker: #eeeeee;
+
+// @import "~bulma/sass/utilities/_all";
+
+// $radius: 6px;
+// $family-primary: 'Inter', #{$family-sans-serif};
+
+// $scheme-main: #2a2c33;
+// $scheme-invert: #eeeeee;
+// $text: $scheme-invert;
+// $text-light: $scheme-invert;
+
+// $navbar-item-hover-background-color: $grey-lighter;
+// $navbar-dropdown-boxed-shadow: 0 8px 8px rgb(0 0 0 / 10%);
+@import "~bulma/sass/utilities/initial-variables.sass";
+
+$family-primary: 'Inter', #{$family-sans-serif};
+
+$grey-accent: hsl(0, 0%, 14%);
+$grey-darker: hsl(0, 0%, 21%);
+$grey-dark: hsl(0, 0%, 29%);
+$grey: hsl(0, 0%, 48%);
+$grey-light: hsl(0, 0%, 71%);
+$grey-lighter: hsl(0, 0%, 86%);
+
+$primary: #2787f5 !default;
+$primary-light: lighten($primary, 10);
+$link: #3273e2;
+$info: #7289da;
+
+$white: #fff;
+$white-ter: #f5f5f5;
+
+$scheme-main: #32343d;
+
+$body-background-color: #2a2c33;
+$background: darken($body-background-color, 5%);
+$footer-background-color: $background;
+
+$border: $grey-dark;
+
+$title-color: $white;
+$subtitle-color: $white-ter;
+$subtitle-strong-color: $white-ter;
+
+$text: $white;
+$text-light: lighten($text, 10);
+$text-strong: darken($text, 5);
+
+$box-color: $text;
+$box-background-color: $grey-accent;
+$box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.3), 0 0px 0 1px rgba(10, 10, 10, 0.1);
+
+$link-hover: $primary-light;
+$link-focus: $primary-light;
+$link-active: $primary-light;
+$link-hover-border: $grey-dark;
+$link-active-border: $grey;
+
+$card-header-background-color: #1e2025;
+
+$button-color: $text;
+$button-background-color: #111;
+$button-border-color: $grey-darker;
+$button-hover-color: $grey-lighter;
+$button-focus: $grey-light;
+$button-active-color: $grey-light;
+
+$input-color: $grey-light;
+$input-icon-color: $grey-light;
+$input-icon-active-color: $input-color;
+$input-hover-border-color: $grey;
+
+$table-color: $text;
+$table-head: $grey-lighter;
+$table-background-color: $grey-darker;
+$table-cell-border: 1px solid $grey-dark;
+
+$table-row-hover-background-color: $grey-dark;
+$table-striped-row-even-background-color: $grey-dark;
+$table-striped-row-even-hover-background-color: lighten($grey-dark, 4);
+
+$pagination-border-color: $grey-darker;
+$pagination-disabled: $grey-light;
+$pagination-disabled-background-color: $grey-dark;
+
+$dropdown-content-background-color: $background;
+$dropdown-item-color: $text;
+
+$navbar-background-color: $body-background-color;
+$navbar-item-color: $white;
+$navbar-item-hover-color: $white;
+$navbar-item-hover-background-color: rgba($white, 0.12);
+$navbar-item-active-color: $link;
+$navbar-item-active-background-color: $navbar-item-hover-background-color;
+
+$navbar-dropdown-background-color: $body-background-color;
+$navbar-dropdown-item-hover-color: $white;
+$navbar-dropdown-item-hover-background-color: $navbar-item-hover-background-color;
+$navbar-dropdown-item-active-background-color: $navbar-item-hover-background-color;
+$navbar-dropdown-arrow: $white;
+
+$code-background: $scheme-main;
+$code: $grey-lighter;
+
+code {
+  border-radius: .2rem;
+}
+
+$tabs-boxed-link-active-background-color: $body-background-color;
+
+$file-cta-background-color: $grey-darker;
+
+$progress-bar-background-color: $grey-dark;
+
+$message-background-color: #ccc;
+
+$panel-heading-background-color: $grey-dark;
+
+@import "~bulma";
+@import "~buefy/src/scss/buefy";
