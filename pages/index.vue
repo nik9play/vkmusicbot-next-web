@@ -11,21 +11,21 @@
       <p class="is-size-4 has-text-centered">Лучшее решение для прослушивания музыки из ВК в Discord.</p>
     </section>
     <section class="buttons-container section">
-      <a href="https://discord.com" class="button is-info is-rounded is-large mx-5 my-2" icon-left="discord">
+      <a href="https://discord.com/oauth2/authorize?client_id=721772274830540833&scope=bot&permissions=8" class="button is-info is-rounded is-large mx-5 my-2" icon-left="discord">
         <b-icon
           icon="discord"
           size="is-small"
         />
         <span>Пригласить</span>
       </a>
-      <a href="https://discord.com" class="button is-warning is-rounded is-large mx-5 my-2" icon-left="discord">
+      <nuxt-link to="/donate" class="button is-warning is-rounded is-large mx-5 my-2" icon-left="discord">
         <b-icon
           icon="cash"
           size="is-small"
         />
         <span>Купить Премиум</span>
-      </a>
-      <a href="https://discord.com" class="button is-black is-rounded is-large mx-5 my-2" icon-left="github">
+      </nuxt-link>
+      <a href="https://github.com/nik9play/vk-music-bot" class="button is-black is-rounded is-large mx-5 my-2" icon-left="github">
         <b-icon
           icon="github"
           size="is-small"
@@ -38,6 +38,18 @@
 
 <script>
 export default {
+  head () {
+    return {
+      title: 'VK Music Bot',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Официальный сайт VK Music Bot — бота для дискорда, с помощью которого можно слушать музыку из ВК. Слушайте треки, плейлисты, аудиотеку пользователя. Включайте треки по ID.'
+        }
+      ]
+    }
+  }
 }
 </script>
 

@@ -40,8 +40,14 @@ export default {
     // https://go.nuxtjs.dev/buefy
     ['nuxt-buefy', { css: false }],
     // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/sitemap'
   ],
+
+  sitemap: {
+    hostname: 'https://vkmusicbot.megaworld.space',
+    gzip: true
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},

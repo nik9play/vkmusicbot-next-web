@@ -18,6 +18,7 @@
                   <li>Перемешивание очереди (<code>-vsh</code>)</li>
                   <li>Бас буст (<code>-vbass</code>)</li>
                 </ul>
+                <a href="https://vk.com/vkmusicbotds?w=app6887721_-197274096" class="button is-success">Купить</a>
               </div>
             </div>
           </div>

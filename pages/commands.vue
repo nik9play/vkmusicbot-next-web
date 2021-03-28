@@ -114,8 +114,8 @@ export default {
         },
         {
           name: '-vl (-vloop)',
-          use: '-vl <queue/song/off>*',
-          description: 'Включает зацикливание очереди (<code>-vl queue</code>) или трека (<code>-vl song</code>). Чтобы выключить, используйте <code>-vl off</code>'
+          use: '-vl <queue/track/off>*',
+          description: 'Включает зацикливание очереди (<code>-vl queue</code>) или трека (<code>-vl track</code>). Чтобы выключить, используйте <code>-vl off</code>'
         },
         {
           name: '-vskip (-vn)',
