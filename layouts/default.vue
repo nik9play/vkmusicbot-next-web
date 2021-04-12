@@ -1,8 +1,8 @@
 <template>
-  <div class="container">
-    <b-navbar>
+  <div>
+    <b-navbar fixed-top>
       <template #brand>
-        <b-navbar-item tag="router-link" :to="{ path: '/' }">
+        <b-navbar-item id="mainlogo" tag="router-link" :to="{ path: '/' }">
           <img
             src="~/assets/VK Music Bot.svg"
             alt="VK Music Bot"
@@ -18,20 +18,15 @@
           :to="item.to"
           tag="router-link"
           class="navbar-item"
+          exact
         >
           {{ item.title }}
         </b-navbar-item>
-        <!-- <b-navbar-item tag="div">
-          <div class="buttons">
-            <a class="button is-primary">
-              <strong>Sign up</strong>
-            </a>
-            <a class="button is-light"> Log in </a>
-          </div>
-        </b-navbar-item> -->
       </template>
     </b-navbar>
+    <!-- <div class="container pt-5"> -->
     <nuxt />
+    <!-- </div> -->
   </div>
 </template>
 
@@ -62,6 +57,27 @@ export default {
         }
       ]
     }
+  },
+
+  head: {
+    bodyAttrs: {
+      class: 'has-navbar-fixed-top'
+    }
   }
 }
 </script>
+
+<style lang="scss">
+.navbar {
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 20%);
+}
+
+.nuxt-link-exact-active {
+  background: #3a3c469c;
+}
+
+#mainlogo {
+  background: transparent;
+}
+</style>

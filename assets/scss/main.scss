@@ -9,6 +9,7 @@
 }
 
 @import "~/assets/fonts/inter.css";
+@import "~/assets/fonts/ibm-plex-mono.css";
 
 // $primary: #2787f5;
 // $grey: #2a2c33;
@@ -31,6 +32,7 @@
 @import "~bulma/sass/utilities/initial-variables.sass";
 
 $family-primary: 'Inter', #{$family-sans-serif};
+$family-monospace: 'IBM Plex Mono', monospace;
 
 $grey-accent: hsl(0, 0%, 14%);
 $grey-darker: hsl(0, 0%, 21%);
@@ -75,11 +77,11 @@ $link-active-border: $grey;
 
 $card-header-background-color: #1e2025;
 
-$button-color: $text;
-$button-background-color: #111;
-$button-border-color: $grey-darker;
+// $button-color: $text;
+// $button-background-color: #111;
+// $button-border-color: $grey-darker;
 $button-hover-color: $grey-lighter;
-$button-focus: $grey-light;
+$button-focus-color: $grey-lighter;
 $button-active-color: $grey-light;
 
 $input-color: $grey-light;
@@ -103,10 +105,10 @@ $pagination-disabled-background-color: $grey-dark;
 $dropdown-content-background-color: $background;
 $dropdown-item-color: $text;
 
-$navbar-background-color: $body-background-color;
+$navbar-background-color: #24272cc4;
 $navbar-item-color: $white;
 $navbar-item-hover-color: $white;
-$navbar-item-hover-background-color: rgba($white, 0.12);
+$navbar-item-hover-background-color: #3a3c469c;
 $navbar-item-active-color: $link;
 $navbar-item-active-background-color: $navbar-item-hover-background-color;
 
@@ -132,6 +134,11 @@ $progress-bar-background-color: $grey-dark;
 $message-background-color: #ccc;
 
 $panel-heading-background-color: $grey-dark;
+
+$skeleton-background: linear-gradient(90deg, #3a3c46 25%, rgba(#3a3c46, 0.5) 50%, #3a3c46 75%);
+
+$code-padding: 0.15em 0.5em 0.15em;
+$code-size: 0.8em;
 
 @import "~bulma";
 @import "~buefy/src/scss/buefy";

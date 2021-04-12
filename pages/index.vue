@@ -1,11 +1,11 @@
 <template>
   <div class="container">
-    <section v-if="!$device.isMobile" v-tilt="{ max: 5, glare: true, 'max-glare': .3 }" class="section is-align-items-center is-flex mt-6 card-main is-flex-direction-column mx-6">
+    <section v-tilt="{ max: 5, glare: true, 'max-glare': .3 }" class="section is-align-items-center is-flex mt-6 card-main is-flex-direction-column mx-6">
       <img class="center-img is-centered" src="~/assets/music.svg">
       <p class="is-size-2 has-text-weight-medium mt-4">VK Music Bot</p>
       <p class="is-size-4 has-text-centered">Лучшее решение для прослушивания музыки из ВК в Discord.</p>
     </section>
-    <section v-if="$device.isMobile" class="section is-align-items-center is-flex card-mobile-main is-flex-direction-column">
+    <section class="section is-align-items-center is-flex card-mobile-main is-flex-direction-column">
       <img class="center-img is-centered" src="~/assets/music.svg">
       <p class="is-size-2 has-text-weight-medium mt-4">VK Music Bot</p>
       <p class="is-size-4 has-text-centered">Лучшее решение для прослушивания музыки из ВК в Discord.</p>
@@ -18,7 +18,7 @@
         />
         <span>Пригласить</span>
       </a>
-      <nuxt-link to="/donate" class="button is-warning is-rounded is-large mx-5 my-2" icon-left="discord">
+      <nuxt-link to="/donate" class="button is-warning is-rounded is-large mx-5 my-2" icon-left="cash">
         <b-icon
           icon="cash"
           size="is-small"
@@ -92,11 +92,19 @@ export default {
   background: linear-gradient(90deg, rgba(109,164,246,1) 0%, rgba(56,108,192,1) 100%);
   border-radius: 1rem;
   box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.3), 0 0px 0 1px rgba(10, 10, 10, 0.1);
+  display: flex!important;
+  @media (max-width: 740px) {
+    display: none!important;
+  }
 }
 
 .card-mobile-main {
   img {
     width: 50%;
+  }
+  display: none!important;
+  @media (max-width: 740px) {
+    display: flex!important;
   }
 }
 </style>

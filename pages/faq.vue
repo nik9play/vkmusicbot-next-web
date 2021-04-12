@@ -58,6 +58,14 @@ export default {
         {
           question: 'Как найти ID трека?',
           answer: '<img src="/faq2.png">'
+        },
+        {
+          question: 'Как получить рабочую ссылку на плейлист?',
+          answer: '<a href="https://vk.com/@vkmusicbotds-kak-poluchit-rabochuu-ssylku-na-pleilist">Инструкция</a>'
+        },
+        {
+          question: 'Почему из плейлиста добавляются только 10 треков?',
+          answer: 'В описании к команде <code>play</code> написано, что по умолчанию добавляется 10 треков. Чтобы добавить больше, необходимо ввести нужное количество после ссылки.'
         }
       ]
     }

@@ -6,7 +6,7 @@
         :closable="false"
       >
         Команды, помеченные жёлтым, требуют <nuxt-link to="/donate">Премиум</nuxt-link>.
-        Аргументы, помеченные звездочкой — обязательные
+        Аргументы, помеченные звездочкой — обязательные.
         Стандартный префикс — <code>-v</code>.
       </b-notification>
       <b-field>
@@ -77,14 +77,15 @@ export default {
         {
           name: '-vp (-vplay, -vpl)',
           use: '-vp <имя или id>* <count> <offset>',
-          description: 'Добавить в очереди трек/треки. Принимает название трека, ID трека, ссылку на плейлист или на пользователя',
-          additional: 'Так же имеются дополнительные аргументы: количество треков (count) и отступ (offset).',
+          description: 'Добавить в очереди трек/треки. Принимает название трека, ID трека, ссылку на плейлист или на пользователя. По умолчанию добавляется только 10 треков.',
+          additional: 'Так же имеются дополнительные, необязательные аргументы: количество треков (count) и отступ (offset).',
           examples: [
             '-vp Егор Летов Моя Оборона',
             '-vp 163187759_456241101',
             '-vp https://vk.com/audios156982712?z=audio_playlist163187759_11%2F62885dd05cc686e318 10',
             '-vp https://vk.com/audios156982712',
-            '-vp https://vk.com/music/playlist/163187759_11_62885dd05cc686e318 34 5'
+            '-vp https://vk.com/music/playlist/163187759_11_62885dd05cc686e318 34 5',
+            '-vp >nikitabogun // включение по айди пользователя'
           ]
         },
         {
@@ -102,7 +103,7 @@ export default {
           description: 'Настройки. Введите <code>-vsettings</code> для подробностей',
           examples: [
             '-vsettings prefix _',
-            '-vsettings djenabled true',
+            '-vsettings dj off',
             '-vsettings djrole @роль',
             '-vsettings djrole роль'
           ]
@@ -131,7 +132,7 @@ export default {
         },
         {
           name: '-vbass',
-          description: 'Включать бас буст. Есть 4 режима: <code>none</code>, <code>low</code>, <code>medium</code>, <code>high</code>'
+          description: 'Включить бас буст. Есть 4 режима: <code>none</code>, <code>low</code>, <code>medium</code>, <code>high</code>'
         },
         {
           name: '-vh',

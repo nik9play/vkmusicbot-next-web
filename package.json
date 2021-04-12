@@ -13,14 +13,17 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.12.5",
     "@nuxtjs/sitemap": "^2.4.0",
+    "apexcharts": "^3.26.0",
+    "axios": "^0.21.1",
     "core-js": "^3.8.3",
+    "luxon": "^1.26.0",
     "nuxt": "^2.14.12",
     "nuxt-buefy": "^0.4.4",
     "transliteration": "^2.2.0",
+    "vue-apexcharts": "^1.6.0",
     "vue-tilt.js": "^1.1.1"
   },
   "devDependencies": {
-    "@nuxtjs/device": "^2.0.0",
     "@nuxtjs/eslint-config": "^5.0.0",
     "@nuxtjs/eslint-module": "^3.0.2",
     "babel-eslint": "^10.1.0",
