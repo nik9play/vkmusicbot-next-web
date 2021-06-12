@@ -10,6 +10,7 @@
 
 @import "~/assets/fonts/inter.css";
 @import "~/assets/fonts/ibm-plex-mono.css";
+@import "~/assets/fonts/montserrat.css";
 
 // $primary: #2787f5;
 // $grey: #2a2c33;
@@ -31,7 +32,7 @@
 // $navbar-dropdown-boxed-shadow: 0 8px 8px rgb(0 0 0 / 10%);
 @import "~bulma/sass/utilities/initial-variables.sass";
 
-$family-primary: 'Inter', #{$family-sans-serif};
+$family-primary: 'Inter var', #{$family-sans-serif};
 $family-monospace: 'IBM Plex Mono', monospace;
 
 $grey-accent: hsl(0, 0%, 14%);
@@ -43,8 +44,10 @@ $grey-lighter: hsl(0, 0%, 86%);
 
 $primary: #2787f5 !default;
 $primary-light: lighten($primary, 10);
-$link: #3273e2;
-$info: #7289da;
+$success: #43bb6d;
+$danger: #d43b5a;
+$link: #3b79ff;
+$info: #5865F2;
 
 $white: #fff;
 $white-ter: #f5f5f5;
@@ -84,10 +87,12 @@ $button-hover-color: $grey-lighter;
 $button-focus-color: $grey-lighter;
 $button-active-color: $grey-light;
 
-$input-color: $grey-light;
+$input-color: $grey-lighter;
 $input-icon-color: $grey-light;
 $input-icon-active-color: $input-color;
 $input-hover-border-color: $grey;
+
+$label-weight: $weight-medium;
 
 $table-color: $text;
 $table-head: $grey-lighter;
@@ -139,6 +144,22 @@ $skeleton-background: linear-gradient(90deg, #3a3c46 25%, rgba(#3a3c46, 0.5) 50%
 
 $code-padding: 0.15em 0.5em 0.15em;
 $code-size: 0.8em;
+
+$radius: 10px;
+$card-radius: $radius;
+$radius-large: 10px;
+
+$skeleton-margin-top: 0;
+
+$loading-background: rgba(10, 10, 10, 0.3);
+
+.modal-close::before, .delete::before, .modal-close::after, .delete::after {
+  background-color: #c5c7d0!important;
+}
+
+.switch input[type=checkbox] + .check:before {
+  background: #ffffff!important;
+}
 
 @import "~bulma";
 @import "~buefy/src/scss/buefy";

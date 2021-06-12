@@ -1,12 +1,12 @@
 export default {
   // Target: https://go.nuxtjs.dev/config-target
-  target: 'static',
+  target: 'server',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'vk-music-bot-website-3',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'ru'
     },
     meta: [
       { charset: 'utf-8' },
@@ -24,7 +24,8 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '~/plugins/vue-tilt.js',
-    { src: '~/plugins/vue-apex.js', ssr: false }
+    { src: '~/plugins/vue-apex.js', ssr: false },
+    '~/plugins/vue-clipboard.js'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -43,16 +44,55 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/buefy
-    ['nuxt-buefy', { css: false }],
+    ['nuxt-buefy', { css: false, materialDesignIcons: false }],
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    '@nuxtjs/auth-next'
   ],
+
+  auth: {
+    // redirect: {
+    //   login: '/auth'
+    // },
+    strategies: {
+      discord: {
+        clientId: '721772274830540833',
+        clientSecret: 'Fq-XHoYtiEGBaUw0QwGCgbTXQBgvbp6l',
+        codeChallengeMethod: '',
+        grantType: 'authorization_code'
+      },
+      social: {
+        scheme: 'oauth2',
+        clientId: '721772274830540833',
+        clientSecret: 'Fq-XHoYtiEGBaUw0QwGCgbTXQBgvbp6l',
+        endpoints: {
+          authorization: 'https://discord.com/api/oauth2/authorize',
+          token: 'https://discord.com/api/oauth2/token',
+          userInfo: 'https://discord.com/api/users/@me'
+        },
+        scope: ['identify', 'email', 'guilds', 'guilds.join'],
+        token: {
+          property: 'access_token',
+          type: 'Bearer',
+          maxAge: 1800
+        },
+        responseType: 'code',
+        accessType: undefined,
+        grantType: '',
+        codeChallengeMethod: ''
+      }
+    }
+  },
 
   sitemap: {
     hostname: 'https://vkmusicbot.megaworld.space',
     gzip: true
   },
+
+  // serverMiddleware: [
+  //   { path: '/auth', handler: '~/server_middleware/auth.js' }
+  // ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
