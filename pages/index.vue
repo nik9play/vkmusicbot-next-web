@@ -24,7 +24,7 @@
         <svg-icon type="mdi" :path="mdiAccountPlusOutline" class="mr-2" />
         <span>Пригласить</span>
       </nuxt-link>
-      <a 
+      <a
         href="https://discord.com/invite/3ts2znePu7"
         class="button ripple-btn is-medium is-info mx-5 my-2"
         @mouseenter="rippleHover"
@@ -126,12 +126,10 @@ export default {
       x = (x * 100).toFixed(1)
       y = (y * 100).toFixed(1)
 
-      let fillPercent = Math.sqrt(e.srcElement.clientWidth * e.srcElement.clientWidth 
-      + e.srcElement.clientWidth * e.srcElement.clientWidth) / e.srcElement.clientWidth
+      let fillPercent = Math.sqrt(e.srcElement.clientWidth * e.srcElement.clientWidth +
+      e.srcElement.clientWidth * e.srcElement.clientWidth) / e.srcElement.clientWidth
 
       fillPercent = (fillPercent * 100).toFixed()
-
-      console.log(x, y)
 
       this.rippleButtonStyles.clip = `circle(0.0% at ${x}% ${y}%)`
       this.rippleButtonStyles.clipHover = `circle(0.0% at ${x}% ${y}%)`
@@ -154,7 +152,7 @@ export default {
       if (this.rippleHovered) {
         this.rippleHovered = false
 
-        this.setRipple(e)      
+        this.setRipple(e)
       }
     }
   }

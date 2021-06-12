@@ -197,7 +197,7 @@ export default {
 
 .navbar {
   backdrop-filter: blur(20px);
-  box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 40%), 0px 1px 0 0px rgb(30, 32, 37);
+  // box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 40%), 0px 1px 0 0px rgb(30, 32, 37);
   // border-radius: 1rem;
 }
 
@@ -220,7 +220,7 @@ export default {
   width: 100vw;
   height: 100vh;
   background: rgba(10, 10, 10, 0.5);
-  z-index: 2;
+  z-index: 5;
   display: flex;
 
   .mobile-menu-container {

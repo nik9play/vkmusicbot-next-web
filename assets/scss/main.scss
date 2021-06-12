@@ -153,6 +153,11 @@ $skeleton-margin-top: 0;
 
 $loading-background: rgba(10, 10, 10, 0.3);
 
+.navbar-item {
+  margin: .75rem .5rem;
+  border-radius: $radius;
+}
+
 .modal-close::before, .delete::before, .modal-close::after, .delete::after {
   background-color: #c5c7d0!important;
 }
