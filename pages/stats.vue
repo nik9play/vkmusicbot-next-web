@@ -39,7 +39,6 @@
 <script>
 import axios from 'axios'
 import { DateTime } from 'luxon'
-import ru from '~/node_modules/apexcharts/dist/locales/ru.json'
 
 export default {
   data () {
@@ -51,84 +50,84 @@ export default {
       }],
       seriesShards: [],
       currentShard: {},
-      chartOptions: {
-        stroke: {
-          show: true,
-          curve: 'straight',
-          lineCap: 'round',
-          width: 3,
-          dashArray: 0
-        },
-        theme: {
-          mode: 'dark'
-        },
-        chart: {
-          animations: {
-            enabled: false
-          },
-          locales: [ru],
-          defaultLocale: 'ru',
-          type: 'line',
-          stacked: false,
-          zoom: {
-            type: 'x',
-            enabled: true,
-            autoScaleYaxis: false
-          },
-          toolbar: {
-            autoSelected: 'zoom'
-          },
-          background: 'transparent',
-          fontFamily: 'Inter'
-        },
-        dataLabels: {
-          enabled: false
-        },
-        markers: {
-          size: 0
-        },
-        tooltip: {
-          style: {
-            fontSize: '12px',
-            fontFamily: 'Inter'
-          },
-          x: {
-            formatter (val, timestamp) {
-              const dt = DateTime.fromMillis(val)
-              return dt.toLocaleString(DateTime.DATETIME_FULL)
-            }
-          }
+      // chartOptions: {
+      //   stroke: {
+      //     show: true,
+      //     curve: 'straight',
+      //     lineCap: 'round',
+      //     width: 3,
+      //     dashArray: 0
+      //   },
+      //   theme: {
+      //     mode: 'dark'
+      //   },
+      //   chart: {
+      //     animations: {
+      //       enabled: false
+      //     },
+      //     locales: [ru],
+      //     defaultLocale: 'ru',
+      //     type: 'line',
+      //     stacked: false,
+      //     zoom: {
+      //       type: 'x',
+      //       enabled: true,
+      //       autoScaleYaxis: false
+      //     },
+      //     toolbar: {
+      //       autoSelected: 'zoom'
+      //     },
+      //     background: 'transparent',
+      //     fontFamily: 'Inter'
+      //   },
+      //   dataLabels: {
+      //     enabled: false
+      //   },
+      //   markers: {
+      //     size: 0
+      //   },
+      //   tooltip: {
+      //     style: {
+      //       fontSize: '12px',
+      //       fontFamily: 'Inter'
+      //     },
+      //     x: {
+      //       formatter (val, timestamp) {
+      //         const dt = DateTime.fromMillis(val)
+      //         return dt.toLocaleString(DateTime.DATETIME_FULL)
+      //       }
+      //     }
 
-        },
-        yaxis: {
-          title: {
-            text: 'Количество серверов'
-          }
-        },
-        xaxis: {
-          type: 'datetime',
-          tickAmount: 10,
-          labels: {
-            rotate: -45,
-            rotateAlways: true,
-            formatter (val, timestamp) {
-              const dt = DateTime.fromMillis(timestamp)
-              return dt.toLocaleString(DateTime.DATE_SHORT)
-            }
-          },
-          tooltip: {
-            enabled: false
-          }
-          // labels: {
-          //   datetimeFormatter: {
-          //     year: 'yyyy',
-          //     month: 'MMM \'yy',
-          //     day: 'dd MMM',
-          //     hour: 'HH:mm'
-          //   }
-          // }
-        }
-      }
+      //   },
+      //   yaxis: {
+      //     title: {
+      //       text: 'Количество серверов'
+      //     }
+      //   },
+      //   xaxis: {
+      //     type: 'datetime',
+      //     tickAmount: 10,
+      //     labels: {
+      //       rotate: -45,
+      //       rotateAlways: true,
+      //       formatter (val, timestamp) {
+      //         const dt = DateTime.fromMillis(timestamp)
+      //         return dt.toLocaleString(DateTime.DATE_SHORT)
+      //       }
+      //     },
+      //     tooltip: {
+      //       enabled: false
+      //     }
+      //     // labels: {
+      //     //   datetimeFormatter: {
+      //     //     year: 'yyyy',
+      //     //     month: 'MMM \'yy',
+      //     //     day: 'dd MMM',
+      //     //     hour: 'HH:mm'
+      //     //   }
+      //     // }
+      //   }
+      // }
     }
   },
 
@@ -145,18 +144,18 @@ export default {
     }
   },
 
-  computed: {
-    currentServers () {
-      const arr = this.seriesMain[0].data
-      return arr[arr.length - 1].y
-    },
-    currentShards () {
-      return this.seriesShards.length
-    }
-  },
+  // computed: {
+  //   currentServers () {
+  //     const arr = this.seriesMain[0].data
+  //     return arr[arr.length - 1].y
+  //   },
+  //   currentShards () {
+  //     return this.seriesShards.length
+  //   }
+  // },
 
   mounted () {
-    this.fillData()
+    // this.fillData()
   },
 
   methods: {
