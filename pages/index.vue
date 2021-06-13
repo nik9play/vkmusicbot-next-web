@@ -6,7 +6,7 @@
         <p class="is-size-4">Лучшее решение для прослушивания музыки из ВК в Discord.</p>
         <p class="is-size-4 mt-2">Бота используют уже <animated-numbers class="is-family-monospace" :value="currentServers" style="min-width: 1000px" /> серверов!</p>
       </div>
-      <img class="center-img is-centered" src="~/assets/music.svg">
+      <img class="center-img is-centered" width="250px" height="250px" src="~/assets/music.svg">
     </section>
     <section class="section is-align-items-center is-flex card-mobile-main is-flex-direction-column">
       <img class="center-img is-centered" src="~/assets/music.svg">

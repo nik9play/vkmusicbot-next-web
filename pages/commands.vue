@@ -48,7 +48,7 @@
             >
               <div :id="command.name" class="card-header-title is-flex-direction-column is-align-items-start">
                 <div><nuxt-link :to="{ path: '', hash: command.name }">#</nuxt-link>
-                  <code v-clipboard:copy="prefix + command.name" class="command-name" @click="copyCommand"> {{ prefix + command.name }} </code>
+                  <code v-clipboard:copy="prefix + command.name" class="command-name" @click="copyCommand(prefix + command.name)"> {{ prefix + command.name }} </code>
                 </div>
                 <div class="has-text-weight-normal" v-html="command.description" />
               </div>
@@ -246,8 +246,11 @@ export default {
   },
 
   methods: {
-    copyCommand () {
-      this.$buefy.toast.open('Команда скопирована в буфер обмена.')
+    copyCommand (name = '') {
+      this.$buefy.toast.open({
+        message: `Команда ${name} скопирована в буфер обмена.`,
+        position: 'is-bottom-left'
+      })
     }
   }
 }

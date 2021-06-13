@@ -2,9 +2,19 @@
   <div class="container">
     <section class="section">
       <p class="is-size-3 mb-4">Справка</p>
-      <b-field>
+      <!-- <b-field>
         <b-input v-model="search" icon="magnify" />
-      </b-field>
+      </b-field> -->
+      <div class="columns">
+        <div class="column">
+          <div class="control has-icons-left  is-clearfix" style="width: 100%">
+            <input v-model="search" type="text" autocomplete="on" class="input" placeholder="Поиск">
+            <span class="icon is-left">
+              <svg-icon type="mdi" :path="mdiMagnify" />
+            </span>
+          </div>
+        </div>
+      </div>
       <div class="cards-container">
         <!-- <Card
           v-for="(command, i) of searchList"
@@ -31,9 +41,7 @@
                 <div><nuxt-link :to="{ path: '', hash: question.question.replace(/[^a-zA-Z0-9а-яА-Я(),]/g,'') }">#</nuxt-link> {{ question.question }}</div>
               </div>
               <a class="card-header-icon">
-                <b-icon
-                  :icon="props.open ? 'menu-up' : 'menu-down'"
-                />
+                <svg-icon type="mdi" :path="props.open ? mdiChevronUp : mdiChevronDown" />
               </a>
             </div>
           </template>
@@ -49,11 +57,21 @@
 </template>
 
 <script>
+import SvgIcon from '@jamescoyle/vue-icon/lib/svg-icon.vue'
+import { mdiChevronDown, mdiChevronUp, mdiMagnify } from '@mdi/js'
+
 export default {
+  components: {
+    SvgIcon
+  },
+
   data () {
     return {
       isOpen: -1,
       search: '',
+      mdiChevronDown,
+      mdiChevronUp,
+      mdiMagnify,
       questions: [
         {
           question: 'Как найти ID трека?',
@@ -91,14 +109,14 @@ export default {
   computed: {
     searchList () {
       return this.questions.filter((question) => {
-        return question.question.toLowerCase().includes(this.search.toLowerCase().trim())
+        return question.question.toLowerCase().includes(this.search.toLowerCase().trim()) || question.answer.toLowerCase().includes(this.search.toLowerCase().trim())
       })
     }
   },
 
   mounted () {
     this.$nextTick(function () {
-      this.isOpen = location.hash.slice(1)
+      this.isOpen = decodeURI(location.hash.slice(1))
     })
   }
 }
